@@ -11,8 +11,8 @@ public class Main {
 		ContaBancaria conta = new ContaBancaria();
 		
 		for(int i = 0 ; i < 10 ; i++){
-			int valorDeposito = (int) (Math.random() * 1000);
-			int valorSaque = (int) (Math.random() * 5000);
+			int valorDeposito = (int) (Math.random() * 10);
+			int valorSaque = (int) (Math.random() * 10);
 			ThreadDeposito deposito = new ThreadDeposito(conta, valorDeposito);
 			ThreadSaque saque = new ThreadSaque(conta, valorSaque);
 			deposito.start();
